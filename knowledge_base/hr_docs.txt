@@ -1,0 +1,55 @@
+NIMBUS TECHNOLOGIES - HR HANDBOOK
+
+About the Company
+Nimbus Technologies is a software company that builds cloud-based payroll and HR products for small and medium businesses. The company was founded in 2015, has its headquarters in Bangalore, and has an office in Pune. Nimbus has about 850 employees.
+
+Working Hours
+- The standard work week is Monday to Friday, 40 hours per week.
+- Core hours are 11:00 AM to 4:00 PM. All employees should be available for meetings during core hours.
+- Employees can choose their start time between 8:00 AM and 11:00 AM.
+
+Hybrid Work Policy
+Employees work from the office 3 days a week. Tuesday and Thursday are mandatory office days for every team, and the third day is chosen by the team. Employees who need to work fully remote for more than 2 weeks must get approval from their manager and HR.
+
+Probation Period
+New employees are on probation for 6 months. At the end of probation, the manager completes a review. Probation can be extended by up to 3 months if needed. The notice period during probation is 15 days.
+
+Notice Period
+After probation, the notice period is:
+- Individual contributors: 60 days
+- Managers and above: 90 days
+The notice period can be shortened if the manager approves, or by paying the salary for the remaining days.
+
+Performance Reviews
+Performance reviews happen twice a year, in April and October. Employees are rated on a 5-point scale:
+1 - Below Expectations
+2 - Partially Meets Expectations
+3 - Meets Expectations
+4 - Exceeds Expectations
+5 - Outstanding
+Salary increments and promotions are decided once a year, during the April review cycle.
+
+Salary and Payroll
+Salaries are paid on the last working day of every month. Payslips are available in the HR portal. Employees must submit their tax investment proofs to Payroll by 15 January every year.
+
+Code of Conduct
+- Treat every colleague with respect. Harassment and discrimination of any kind are not tolerated.
+- Do not share confidential customer or company information outside the company.
+- Report any conflict of interest to HR.
+- Complaints related to workplace harassment can be raised with the Internal Committee (IC) at ic@nimbustech.com. All complaints are kept confidential.
+
+Learning and Development
+Every employee gets a learning budget of Rs 30,000 per year. It can be used for online courses, certifications, books and conferences. Unused budget does not carry forward to the next year.
+
+Employee Benefits
+- Medical insurance for the employee and family (see medical_policy.txt)
+- Paid leave (see leave_policy.txt)
+- Free lunch in the office on working days
+- Gym membership reimbursement up to Rs 1,500 per month
+- Internet reimbursement up to Rs 1,000 per month
+
+Exit Process
+Employees who resign must submit their resignation in the HR portal. During the notice period they must complete a knowledge transfer and return their laptop and ID card. The full and final settlement is paid within 45 days of the last working day.
+
+Contact
+For any HR questions, email hr@nimbustech.com or raise a ticket in the HR portal.

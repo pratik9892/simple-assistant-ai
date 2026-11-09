@@ -1,0 +1,64 @@
+NIMBUS TECHNOLOGIES - ENGINEERING AND TECHNICAL DOCUMENTATION
+
+Tech Stack
+- Backend: Python 3.12 with FastAPI, and Java 21 with Spring Boot for the payroll engine
+- Frontend: React 18 with TypeScript
+- Mobile: React Native
+- Databases: PostgreSQL 16 as the main database, Redis for caching and sessions
+- Messaging: Apache Kafka for events between services
+- Cloud: AWS (Mumbai region ap-south-1 as primary, Singapore ap-southeast-1 for disaster recovery)
+- Containers: Docker and Kubernetes (Amazon EKS)
+- Monitoring: Prometheus and Grafana for metrics, ELK stack for logs, PagerDuty for alerts
+
+System Architecture
+The platform follows a microservices architecture. The main services are:
+- auth-service: login, sessions and single sign-on (SSO)
+- employee-service: employee profiles and organization structure
+- payroll-service: salary calculation and payslip generation
+- payment-service: salary transfers to bank accounts
+- notification-service: email, SMS and in-app notifications
+All requests from clients go through the API Gateway, which handles authentication and rate limiting (1,000 requests per minute per customer).
+
+Git Workflow
+- The main branch is always deployable.
+- Create a feature branch from main using the format feature/<ticket-id>-short-description, for example feature/NIM-1234-add-leave-api.
+- Bug fix branches use the format bugfix/<ticket-id>-short-description.
+- Commit messages must start with the ticket ID, for example "NIM-1234: add leave balance API".
+
+Code Review
+- Every pull request needs at least 2 approvals before merging. One approval must be from a senior engineer.
+- Pull requests should be smaller than 400 lines of change.
+- All automated tests must pass and code coverage must stay above 80 percent.
+- Reviewers should respond within 1 working day.
+
+Deployment Process
+1. Code is merged to main after review.
+2. The CI pipeline (GitHub Actions) runs tests, linting and a security scan.
+3. The build is deployed automatically to the staging environment.
+4. QA tests the change on staging.
+5. Production deployment happens through a canary release: 5 percent of traffic first, then 50 percent, then 100 percent, with 15 minutes of monitoring between each step.
+Production deployments are allowed Monday to Thursday, 10:00 AM to 5:00 PM. Deployments on Friday, weekends and public holidays are not allowed except for urgent fixes approved by the Engineering Manager.
+
+Environments
+- dev: for developers to test their own changes
+- staging: a copy of production with test data, used by QA
+- production: live customer environment
+
+On-Call Rotation
+- Each team has a weekly on-call rotation that starts every Monday at 10:00 AM.
+- The on-call engineer must acknowledge a PagerDuty alert within 15 minutes.
+- If the on-call engineer does not respond, the alert is escalated to the secondary on-call, and then to the Engineering Manager.
+- On-call engineers receive an allowance of Rs 5,000 per week.
+- After a Sev1 or Sev2 incident, the team must write an RCA (see rca_docs.txt).
+
+Security Guidelines
+- Never commit passwords, API keys or secrets to Git. Store secrets in AWS Secrets Manager.
+- Customer data must be encrypted at rest and in transit (TLS 1.2 or higher).
+- Access to production databases requires approval and is given for a maximum of 4 hours at a time.
+- All laptops must have disk encryption and the company antivirus installed.
+
+Developer Access and Tools
+New engineers get access to GitHub, Jira, Confluence, AWS (dev account), Slack and PagerDuty in their first week. Access requests are raised through the IT helpdesk portal.
+
+Contact
+For engineering platform questions, post in the #platform-help Slack channel or email devops@nimbustech.com.

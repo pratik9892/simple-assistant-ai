@@ -1,0 +1,67 @@
+NIMBUS TECHNOLOGIES - ROOT CAUSE ANALYSIS (RCA) DOCUMENTS
+
+What is an RCA
+A Root Cause Analysis (RCA) is a written review created after a production incident. Its purpose is to find the real cause of the problem and prevent it from happening again. Nimbus follows a blameless RCA culture: the goal is to fix systems and processes, not to blame people.
+
+When an RCA is Required
+An RCA is mandatory for every Severity 1 (Sev1) and Severity 2 (Sev2) incident.
+- Sev1: Complete outage or data loss affecting all customers.
+- Sev2: Major feature broken or severe slowness affecting many customers.
+- Sev3: Minor issue with a workaround. RCA is optional.
+The RCA must be published within 5 working days after the incident is resolved.
+
+RCA Template
+Every RCA must contain these sections:
+1. Summary - what happened, in two or three sentences
+2. Impact - which customers and services were affected and for how long
+3. Timeline - detection, escalation, mitigation and resolution times
+4. Root Cause - the underlying technical or process cause
+5. Resolution - what was done to fix the issue
+6. Action Items - follow-up tasks with an owner and a due date
+7. Lessons Learned
+
+The 5 Whys Technique
+Teams use the "5 Whys" technique to reach the root cause. Keep asking "why did this happen?" until you reach a cause that, if fixed, would prevent the incident from happening again.
+
+----------------------------------------------------------------
+
+RCA-2024-017: Payment Service Outage
+Date: 12 March 2024
+Severity: Sev1
+Duration: 47 minutes
+Impact: Customers could not complete payments in the web and mobile apps. Around 3,200 transactions failed.
+Root Cause: The database connection pool of the payment service was set to 20 connections. A marketing campaign caused a traffic spike that was 4 times the normal load, and the connection pool was exhausted. New requests timed out while waiting for a database connection.
+Resolution: The on-call engineer increased the connection pool size to 100 and restarted the payment service pods.
+Action Items:
+- Add an alert when connection pool usage goes above 80 percent (Owner: Platform team)
+- Enable autoscaling for the payment service (Owner: Payments team)
+- Marketing to share campaign schedules with Engineering 48 hours in advance (Owner: Marketing)
+
+----------------------------------------------------------------
+
+RCA-2024-031: Login Failures After Deployment
+Date: 2 June 2024
+Severity: Sev2
+Duration: 25 minutes
+Impact: About 40 percent of users were unable to log in.
+Root Cause: A new release changed the format of the session token. Old tokens stored in the Redis cache could not be read by the new code, so those users were logged out and their logins failed. The change was not caught because the staging environment had an empty cache.
+Resolution: The release was rolled back. A fixed version that supports both the old and new token formats was deployed the next day.
+Action Items:
+- Add backward compatibility checks to the code review checklist (Owner: Auth team)
+- Run canary deployments to 5 percent of traffic before a full rollout (Owner: DevOps)
+
+----------------------------------------------------------------
+
+RCA-2024-045: Disk Full on Logging Server
+Date: 19 August 2024
+Severity: Sev2
+Duration: 2 hours 10 minutes
+Impact: Application logs were not collected, and the monitoring dashboards showed no data. Customers were not directly affected, but engineers could not debug other issues during this time.
+Root Cause: Log rotation was disabled during a server migration and was never turned back on. The disk filled up to 100 percent in 6 days.
+Resolution: Old logs were archived to S3, log rotation was re-enabled and the disk was expanded from 500 GB to 1 TB.
+Action Items:
+- Add a disk usage alert at 75 percent (Owner: SRE team)
+- Add log rotation to the server migration checklist (Owner: SRE team)
+
+Contact
+Questions about the RCA process can be sent to the SRE team at sre@nimbustech.com.

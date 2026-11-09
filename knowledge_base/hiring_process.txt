@@ -1,0 +1,48 @@
+NIMBUS TECHNOLOGIES - HIRING PROCESS
+
+Overview
+Nimbus Technologies follows a structured hiring process to make sure every candidate is evaluated fairly and consistently. The full process usually takes 3 to 4 weeks from application to offer. The Talent Acquisition (TA) team owns the process, and the hiring manager makes the final decision together with the interview panel.
+
+Step 1 - Job Requisition
+A hiring manager raises a job requisition in the HR portal. The requisition must include the role title, team, level, budget range and the reason for hiring (new position or replacement). The requisition is approved by the department head and the Finance team before the job is posted.
+
+Step 2 - Job Posting and Sourcing
+Approved roles are posted on the Nimbus careers page, LinkedIn and Naukri. Internal employees can see every opening on the internal job board 7 days before it is posted externally. Recruiters also source candidates directly and through approved recruitment agencies.
+
+Step 3 - Resume Screening
+Recruiters screen resumes within 5 working days of receiving them. Candidates are shortlisted based on the required skills, experience and role level mentioned in the job description. Shortlisted candidates receive an email with the next steps.
+
+Step 4 - Recruiter Phone Screen
+A 20 to 30 minute call with the recruiter to discuss the candidate's background, expected salary, notice period and interest in the role.
+
+Step 5 - Technical Assessment
+Engineering candidates complete an online coding test on HackerRank. The test has 2 coding problems and 10 multiple choice questions, and the time limit is 90 minutes. The minimum passing score is 60 percent. Non-engineering roles may have a case study or written assignment instead.
+
+Step 6 - Interview Rounds
+Candidates go through 3 interview rounds:
+- Round 1: Technical or functional interview with a senior team member (60 minutes)
+- Round 2: System design or problem solving interview with the hiring manager (60 minutes)
+- Round 3: Culture and values interview with an HR business partner (45 minutes)
+Interviews are conducted on Google Meet or in person at the Bangalore or Pune office.
+
+Step 7 - Feedback and Decision
+Each interviewer submits written feedback in the HR portal within 24 hours of the interview. The panel meets for a debrief and recommends Hire or No Hire. The hiring manager makes the final decision.
+
+Step 8 - Offer
+The recruiter shares a verbal offer first, followed by a written offer letter within 2 working days. Candidates have 5 working days to accept the offer. Salary negotiation must be approved by the TA lead.
+
+Step 9 - Background Verification
+After the offer is accepted, a third-party agency verifies education, previous employment and address. Background verification usually takes 7 to 10 working days. Employment is conditional on clearing background verification.
+
+Step 10 - Onboarding
+New joiners receive their laptop and system access on day one. The first week includes an orientation session, HR policy walkthrough and a meeting with their assigned onboarding buddy.
+
+Employee Referral Program
+Employees who refer a candidate who is hired receive a referral bonus:
+- Junior roles (0 to 3 years experience): Rs 25,000
+- Mid-level roles (3 to 7 years experience): Rs 50,000
+- Senior roles (7+ years experience): Rs 75,000
+The bonus is paid after the referred employee completes 90 days with the company.
+
+Contact
+For questions about hiring, email talent@nimbustech.com.
